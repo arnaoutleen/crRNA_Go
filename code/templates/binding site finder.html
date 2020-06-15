@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+	<title>crRNA go - Cas13b Binding Site Finder </title>
+</head>
+<body>
+
+	<!-- Header with title and buttons -->
+	<div class="d-flex flex-column justify-content-center bd-highlight mb-2">
+		<div class="d-flex p-2 bd-highlight justify-content-center"><h1>crRNA go</h1></div>
+		<div class="d-flex p-2 bd-highlight justify-content-center"><a href=train><button type="button" class="btn btn-outline-primary">Train Model</button>
+		</a><a href=binding><button type="button" class="btn btn-outline-success">Cas13b Binding Site Finder</button></a><a href=designer>
+			<button type="button" class="btn btn-outline-dark">crRNA Designer</button></a></div>
+	</div>
+	<!-- Page title -->
+	<div class="d-flex flex-column justify-content-center bd-highlight mb-1">
+			<div class="d-flex p-2 bd-highlight justify-content-center"><h2>Cas13 Binding Site Finder</h2></div>
+		</div>
+		<!-- Binding Site Finder -->
+		<div class="d-flex flex-column bd-highlight mb-3">
+			<div class="p-2 bd-highlight">
+				<form  action="" method="post" role="form" enctype="multipart/form-data">
+					<div class="form-group"><h3>Step 1:</h3>Upload machine learning model (.h5 format):
+						<div class="d-inline-flex p-2"><input type=file class="form-control-file" name="file" id="file"></div>
+					</div>
+					or, <a href="https://srv-file19.gofile.io/download/feqbzk/my_model_bidirectional.h5"><button type="button" class="btn btn-link">download and use a test model (.h5)</button></a></div>
+					<div class="p-2 bd-highlight"><h3>Step 2:</h3> <div class="d-inline-flex p-2"><div class="form-group">
+					<label for="exampleFormControlTextarea1"> Insert your reference RNA Sequence (ATGC alphabet, max. 1,000bp):</label>
+					<textarea class="form-control" id="seqn_input" name="seqn_input" rows="3"></textarea>
+					</div></div>
+					or,<a href=binding/sampleRNA><button type="button" class="btn btn-link">use a test sequence</button></a></div>
+		<div class="p-2 bd-highlight"><h3>Step 3:</h3>How large is your binding site? (22 to 28 base pairs) <div class="d-inline-flex p-2"><input class="form-control" id="size" name="size" type="number" placeholder="22"></div>
+		</div>
+	</div>
+	<!-- Go Button -->
+		<div class="d-flex flex-column justify-content-center bd-highlight mb-2">
+			<div class="d-flex p-2 bd-highlight justify-content-center"><button type="submit" class="btn btn-primary btn-lg">Find Binding Sites!</button></form>
+		</div>
+	</div>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
